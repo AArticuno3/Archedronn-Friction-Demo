@@ -1,0 +1,149 @@
+.body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.container {
+    margin: auto;
+    padding: 4px;
+    aspect-ratio: 1/1;
+    width: 90%;
+    border: solid 1px #333;
+    border-radius: 25%;
+    box-shadow: inset 0px 0px 20px 20px rgba(0, 255, 0, 0.05);
+    overflow: hidden;
+}
+
+@media (min-width: 150px) {
+    .container{
+        width: 82.5%;
+    }
+}
+
+@media (min-width: 200px) {
+    .container{
+        width: 75%;
+    }
+}
+
+@media (min-width: 250px) {
+    .container{
+        width: 67.5%;
+    }
+}
+
+@media (min-width: 300px) {
+    .container{
+        width: 60%;
+    }
+}
+
+@media (min-width: 350px) {
+    .container{
+        width: 52.5%;
+    }
+}
+
+@media (min-width: 400px) {
+    .container{
+        width: 45%;
+    }
+}
+
+@media (min-width: 450px) {
+    .container{
+        width: 37.5%;
+    }
+}
+
+@media (min-width: 500px){
+    .container{
+        width: 30%;
+    }
+}
+
+.ball {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    aspect-ratio: 1/1;
+    width: 7.5%;
+    border: solid 1px #333;
+    border-radius: 50%;
+}
+
+#leftBall {
+    animation: firstTravel 15s;
+    float: left;
+    background-color: rgba(0, 0, 255, 0.4);
+    top: -100%;
+}
+
+@keyframes firstTravel {
+    0% {
+        top: 30%;
+        left: -12.5%;
+        animation-timing-function: cubic-bezier(.1,.9,0,.8);    
+    }
+    50% {
+        top: 50%;
+        left: 50%;
+        animation-timing-function: cubic-bezier(.9,.1,.8,0);
+    }
+    100% {
+        top: 70%;
+        left: 112.5%;
+    }
+}
+
+#rightBall {
+    animation: secondTravel 18s;
+    float: right;
+    background-color: rgba(255, 0, 0, 0.4);
+    top: -100%;
+}
+
+@keyframes secondTravel {
+    0% {
+        top: 82.5%;
+        left: 12.5%;
+    }
+    50% {
+        top: 35%;
+        left: -40%;
+    }
+    100% {
+        top: -12.5%;
+        left: -92.5%;
+    }
+}
+
+.sphere {
+    position: absolute;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+#leftSphereOut {
+    border: solid 2px rgba(0, 0, 255, 0.4);
+    box-shadow: 0px 0px 20px 20px rgba(0, 0, 255, 0.4);
+    width: 400%;
+}
+
+#leftSphereIn {
+    box-shadow: inset 0px 0px 20px 20px rgba(0, 0, 255, 0.4);
+    width: 400%;
+}
+
+#rightSphereOut {
+    border: solid 2px rgba(255, 0, 0, 0.4);
+    box-shadow: 0px 0px 40px 40px rgba(255, 0, 0, 0.4);
+    width: 1500%;
+}
+
+#rightSphereIn {
+    box-shadow: inset 0px 0px 40px 40px rgba(255, 0, 0, 0.4);
+    width: 1500%;
+}
